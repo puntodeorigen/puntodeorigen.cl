@@ -1,0 +1,302 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Punto de Origen - Rehabilitación y acompañamiento en consumo con Ana María Triviño.">
+<title>Punto de Origen | Ana María Triviño</title>
+
+<style>
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #111;
+  line-height: 1.7;
+  background-color: #fafafa;
+}
+
+/* NAV */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover { color: #000; }
+
+/* SECTIONS */
+section {
+  min-height: 100vh;
+  /* dvh ayuda en móviles para que la barra del navegador no tape el contenido */
+  min-height: 100dvh; 
+  display: flex;
+  align-items: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.container {
+  max-width: 780px;
+  margin: auto;
+  width: 100%;
+  /* SOLUCIÓN DRIVE: Animación CSS pura al cargar, sin ocultar elementos por defecto */
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+/* TEXT */
+h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: #111; }
+h2 { font-size: 1.6rem; margin-bottom: 1.2rem; color: #222; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+p { margin-bottom: 1rem; color: #444; }
+
+.subtitle {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.quote {
+  font-style: italic;
+  color: #666;
+  border-left: 3px solid #ccc;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.05rem;
+}
+
+ul { margin-left: 1.5rem; margin-bottom: 1rem; color: #444; }
+li { margin-bottom: 0.5rem; }
+
+/* CALENDAR & CONTACT */
+.calendar-wrapper {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  background: #fff;
+}
+
+.contact-box {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.contact-box a {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background: #333;
+  transition: 0.3s;
+}
+
+@media(max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.98);
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+  }
+
+  .nav-links.active { left: 0; }
+  .menu-toggle { display: flex; }
+  .card { padding: 1.8rem; }
+  h1 { font-size: 1.8rem; }
+  section { padding: 80px 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="#inicio" class="logo">Punto de Origen</a>
+
+    <button class="menu-toggle" id="menu-btn" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#enfoque">Enfoque</a></li>
+      <li><a href="#metodologia">Metodología</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+    </ul>
+  </div>
+</header>
+
+<section id="inicio">
+  <div class="container">
+    <div class="card">
+      <h1>Ana María Triviño</h1>
+      <span class="subtitle">Terapeuta en rehabilitación de consumo</span>
+
+      <div class="quote">
+        “No trabajo desde la idea de que la droga es el problema. 
+        Trabajo sobre cómo te relacionas con lo que consumes y con lo que sientes.”
+      </div>
+
+      <p>Acompañamiento terapéutico online, sin juicios. Un espacio para entender lo que ocurre y comenzar a intervenir en ello.</p>
+    </div>
+  </div>
+</section>
+
+<section id="enfoque">
+  <div class="container">
+    <div class="card">
+      <h2>Enfoque</h2>
+      <p>El consumo no aparece porque sí. Tiene una función.</p>
+      <p>Puede regular emociones, evitar pensamientos o sostener estados internos difíciles. Eliminarlo sin entender eso hace que el problema se repita.</p>
+      <p>El trabajo se centra en comprender qué está pasando antes de intentar cambiarlo.</p>
+    </div>
+  </div>
+</section>
+
+<section id="metodologia">
+  <div class="container">
+    <div class="card">
+      <h2>Metodología</h2>
+      <p>Se trabaja sobre el <strong>patrón de consumo</strong>: la forma repetitiva en que una persona piensa, siente y actúa.</p>
+      <ul>
+        <li>Regulación emocional</li>
+        <li>Identificación de gatillantes</li>
+        <li>Relaciones interpersonales</li>
+        <li>Sentido personal y motivación</li>
+      </ul>
+      <p>No todos los procesos son iguales. Se ajusta según cada persona y momento.</p>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="container">
+    <div class="card">
+      <h2>Proceso</h2>
+      <p>La rehabilitación no es lineal.</p>
+      <p>La recaída no se trabaja como un fracaso, sino como información. Permite entender qué no estaba siendo visto o qué necesita ajustarse.</p>
+      <p>El proceso apunta a generar conciencia y nuevas formas de responder frente a lo que antes llevaba al consumo.</p>
+    </div>
+  </div>
+</section>
+
+<section id="agenda">
+  <div class="container">
+    <div class="card">
+      <h2>Agenda de sesiones</h2>
+      <p>Puedes agendar directamente una sesión online en el siguiente calendario:</p>
+
+      <div class="calendar-wrapper">
+        <iframe 
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0xi_L-CCqDH1o-1y4jiFWkAO--7pkOkOdpIXZfzcvkNJAOzaqHyAf9_zusp0gK21jxs-uONWN1?gv=true"
+          width="100%" 
+          height="600" 
+          frameborder="0"
+          title="Calendario de sesiones"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="contact-box">
+        <p>Contacto directo:</p>
+        <a href="mailto:puntodeorigencl@gmail.com">puntodeorigencl@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  /* MENU MOBILE BÁSICO (Seguro para Google Drive) */
+  const btn = document.getElementById('menu-btn');
+  const nav = document.getElementById('nav');
+
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>
