@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -20,7 +20,7 @@ header{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(255,255,255,0.9);
+background:rgba(255,255,255,0.95);
 backdrop-filter:blur(10px);
 border-bottom:1px solid #eee;
 z-index:1000;
@@ -52,7 +52,6 @@ min-height:100vh;
 display:flex;
 align-items:center;
 padding:100px 20px;
-position:relative;
 }
 
 .container{
@@ -61,19 +60,20 @@ margin:auto;
 }
 
 .card{
-background:rgba(255,255,255,0.9);
+background:rgba(255,255,255,0.92);
 padding:2.5rem;
 border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,0.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.06);
 }
 
-/* GRADIENTS */
-#inicio{background:linear-gradient(#e6f0f7,#dbeafe);}
-#enfoque{background:linear-gradient(#dbeafe,#dcfce7);}
-#metodologia{background:linear-gradient(#dcfce7,#fef3c7);}
-#contenidos{background:linear-gradient(#fef3c7,#ede9fe);}
-#proceso{background:linear-gradient(#ede9fe,#fee2e2);}
-#agenda{background:linear-gradient(#fee2e2,#ffffff);}
+/* COLOR MÁS VIBRANTE (pero claro) */
+#inicio{background:linear-gradient(#dbeafe,#93c5fd);}
+#vision{background:linear-gradient(#93c5fd,#6ee7b7);}
+#enfoque{background:linear-gradient(#6ee7b7,#fde68a);}
+#metodologia{background:linear-gradient(#fde68a,#c4b5fd);}
+#contenidos{background:linear-gradient(#c4b5fd,#fda4af);}
+#valores{background:linear-gradient(#fda4af,#fbcfe8);}
+#agenda{background:linear-gradient(#fbcfe8,#ffffff);}
 
 /* TEXT */
 h1{font-size:2.6rem;margin-bottom:1rem;}
@@ -81,32 +81,14 @@ h2{font-size:1.6rem;margin-bottom:1rem;}
 p{margin-bottom:1rem;}
 
 .quote{
-border-left:3px solid #60a5fa;
+border-left:3px solid #2563eb;
 padding-left:1rem;
 font-style:italic;
 }
 
 /* LIST */
-ul{
-margin-top:1rem;
-padding-left:1.2rem;
-}
-
-li{
-margin-bottom:0.6rem;
-}
-
-/* ANIMATION */
-.fade{
-opacity:0;
-transform:translateY(30px);
-transition:0.6s ease;
-}
-
-.fade.visible{
-opacity:1;
-transform:translateY(0);
-}
+ul{margin-top:1rem;padding-left:1.2rem;}
+li{margin-bottom:0.6rem;}
 
 /* CONTACT */
 .contact-box{
@@ -121,6 +103,17 @@ margin-top:1rem;
 margin-top:2rem;
 border-radius:12px;
 overflow:hidden;
+}
+
+/* ANIM */
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:0.6s ease;
+}
+.fade.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* MOBILE */
@@ -139,9 +132,11 @@ h1{font-size:2rem;}
 <strong>Punto de Origen</strong>
 <ul class="nav-links">
 <li><a href="#inicio">Inicio</a></li>
+<li><a href="#vision">Visión</a></li>
 <li><a href="#enfoque">Enfoque</a></li>
 <li><a href="#metodologia">Metodología</a></li>
-<li><a href="#contenidos">Contenidos</a></li>
+<li><a href="#contenidos">Proceso</a></li>
+<li><a href="#valores">Valores</a></li>
 <li><a href="#agenda">Agenda</a></li>
 </ul>
 </div>
@@ -152,18 +147,46 @@ h1{font-size:2rem;}
 <div class="container fade">
 <div class="card">
 <h1>Ana María Triviño</h1>
-<p><strong>Terapeuta en rehabilitación de consumo</strong></p>
+<p><strong>Terapeuta en rehabilitación de consumo de sustancias</strong></p>
 
 <p class="quote">
-“No trabajo desde la idea de que la droga es el problema. 
+“No trabajo desde la idea de que la sustancia es el problema. 
 Trabajo sobre la forma en que te relacionas con lo que consumes y con lo que sientes.”
 </p>
 
 <p>
-Este es un espacio de trabajo terapéutico.  
-No se trata solo de dejar de consumir, sino de entender qué está pasando contigo y empezar a intervenir en eso de forma concreta.
+Este es un espacio terapéutico.  
+No se trata solo de dejar de consumir, sino de entender qué está pasando y empezar a intervenir en eso de forma concreta.
+</p>
+</div>
+</div>
+</section>
+
+<!-- VISIÓN -->
+<section id="vision">
+<div class="container fade">
+<div class="card">
+<h2>Visión Terapéutica</h2>
+
+<p>
+Mi trabajo se construye desde una mirada humanista. No trabajo desde el juicio ni desde etiquetas.
 </p>
 
+<p>
+El consumo de sustancias no aparece al azar. Es una forma de responder a algo que no ha podido ser sostenido de otra manera.
+</p>
+
+<p>
+Más que preguntarse “por qué”, el proceso apunta a comprender <strong>para qué ha servido consumir</strong>.
+</p>
+
+<p>
+Cuando esa función se reconoce, aparece una posibilidad real de cambio.
+</p>
+
+<p>
+No hay soluciones rápidas. Hay procesos.
+</p>
 </div>
 </div>
 </section>
@@ -175,19 +198,16 @@ No se trata solo de dejar de consumir, sino de entender qué está pasando conti
 <h2>Enfoque</h2>
 
 <p>
-El consumo cumple una función.  
-Puede servir para aliviar, evitar, sostener o regular estados internos.
+El consumo cumple una función: regular, evitar, sostener o aliviar estados internos.
 </p>
 
 <p>
-Si eso no se entiende, el cambio se vuelve forzado y difícil de sostener.
+Si eso no se comprende, el cambio se vuelve frágil.
 </p>
 
 <p>
-El trabajo parte por observar sin juicio, identificar qué está ocurriendo y darle sentido.
-Desde ahí se puede empezar a modificar.
+El trabajo comienza observando sin juicio, identificando qué está ocurriendo y dando sentido a esa experiencia.
 </p>
-
 </div>
 </div>
 </section>
@@ -199,24 +219,19 @@ Desde ahí se puede empezar a modificar.
 <h2>Metodología</h2>
 
 <p>
-Se trabaja sobre el patrón de consumo: la secuencia que se repite entre pensamientos, emociones y conducta.
-</p>
-
-<p>
-En sesión se revisa:
+Se trabaja sobre el patrón de consumo: la secuencia repetitiva entre pensamiento, emoción y conducta.
 </p>
 
 <ul>
-<li>Qué ocurre antes del consumo</li>
-<li>Qué lo gatilla</li>
-<li>Qué efecto cumple</li>
-<li>Qué pasa después</li>
+<li>Identificación del patrón</li>
+<li>Reconocimiento de detonantes</li>
+<li>Comprensión de la función del consumo</li>
+<li>Intervención en el ciclo</li>
 </ul>
 
 <p>
-Esto permite intervenir de forma concreta, no solo desde la intención de cambio.
+No se trata solo de dejar de consumir, sino de transformar la estructura que lo sostiene.
 </p>
-
 </div>
 </div>
 </section>
@@ -225,51 +240,43 @@ Esto permite intervenir de forma concreta, no solo desde la intención de cambio
 <section id="contenidos">
 <div class="container fade">
 <div class="card">
-<h2>Contenidos del proceso</h2>
-
-<p>
-Durante el proceso terapéutico se trabajan aspectos específicos que sostienen el consumo:
-</p>
+<h2>Proceso Terapéutico</h2>
 
 <ul>
-<li>Reconocimiento de emociones y estados internos</li>
-<li>Identificación de detonantes (personas, contextos, pensamientos)</li>
+<li>Evaluación inicial y comprensión del contexto</li>
+<li>Mapa del consumo</li>
+<li>Prevención de recaídas</li>
 <li>Regulación emocional</li>
-<li>Ansiedad, impulsividad y manejo de urgencias</li>
-<li>Relación con el cuerpo y el descanso</li>
-<li>Hábitos y estructura diaria</li>
-<li>Relaciones interpersonales</li>
-<li>Sentido personal y motivación</li>
+<li>Manejo de impulsos y ansiedad</li>
+<li>Factores de riesgo y protectores</li>
+<li>Seguimiento del proceso</li>
 </ul>
 
 <p>
-No todos los procesos son iguales.  
-Se ajusta según cada persona y momento.
+La recaída no es un fracaso. Es información que permite ajustar el proceso.
 </p>
-
 </div>
 </div>
 </section>
 
-<!-- PROCESO -->
-<section id="proceso">
+<!-- VALORES -->
+<section id="valores">
 <div class="container fade">
 <div class="card">
-<h2>Proceso</h2>
+<h2>Valor de las sesiones</h2>
 
 <p>
-La rehabilitación no es lineal.
+Sesión individual (60 minutos):  
+<strong>$25.000 – $35.000</strong>
 </p>
 
 <p>
-La recaída no se trabaja como un fracaso, sino como información.
-Permite entender qué no estaba siendo visto o qué necesita ajustarse.
+El valor no responde solo al tiempo de sesión, sino al proceso completo: acompañamiento, seguimiento y trabajo terapéutico.
 </p>
 
 <p>
-El proceso apunta a generar conciencia y nuevas formas de responder frente a lo que antes llevaba al consumo.
+Existen cupos limitados con valor diferenciado según situación.
 </p>
-
 </div>
 </div>
 </section>
@@ -281,7 +288,7 @@ El proceso apunta a generar conciencia y nuevas formas de responder frente a lo 
 <h2>Agenda de sesiones</h2>
 
 <p>
-Puedes agendar directamente una sesión online en el siguiente calendario:
+Puedes agendar directamente una sesión online:
 </p>
 
 <div class="calendar-wrapper">
@@ -306,7 +313,6 @@ entry.target.classList.add('visible');
 }
 });
 });
-
 document.querySelectorAll('.fade').forEach(el=>{
 observer.observe(el);
 });
